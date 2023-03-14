@@ -1,0 +1,53 @@
+body, html {
+	height: 100%;
+	font-family: "calibri", "arial";
+}
+#fotoApresentacao, #textoApresentacao, #local{
+    width: 400px;
+    height: 500px;
+    margin-top: 30px;
+    
+}
+#mapa{
+    width: 300px;
+    height: 350px;
+   
+}
+#local{
+    margin-left: 10px;
+}
+
+#fotoEstante{
+    width: 300px;
+    height: 400px;
+    border: 1px solid #000000;
+    margin-left: 50px;
+}
+#Endereço{
+    color: #000000;
+    font-size:25px;
+    margin-bottom: 10px;
+}
+#logo{
+    width: 40px;
+    height: 40px;
+    
+}
+#logo2{
+    width: 35px;
+    height: 35px;
+}
+#textoInicial{
+    font-size: 25px;
+}
+#segue{
+    font-size: 25px;
+}
+#enderecoDigitado{
+    font-size: 20px;
+}
+#berimbau{
+    color: #0066ff;
+    font-size: 25px;
+    
+}

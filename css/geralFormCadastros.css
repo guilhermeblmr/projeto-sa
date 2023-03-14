@@ -1,0 +1,202 @@
+
+body {
+    font-family: "Century Gothic", "Arial"; 
+    text-align: center;
+    font-size: 20px;
+}
+#titulo{
+    font: bold;
+    font-size: 35px; 
+}
+
+#tituloPrincipal{
+    color: #0066ff;
+    font: bold;
+    font-size: 35px;   
+}
+#sub{
+    font: bold;
+    font-size: 25px; 
+    color: #0066ffb3;
+}
+/*caixa do input*/
+input {
+	outline: none;
+	border: none;
+    background-color: #0066ff2f;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+  background-color: #0066ff2f;
+}
+
+#icones{
+    background-color: transparent;
+    border: none;
+    
+}
+fieldset{
+    width: 500px;
+    margin-left: 30%;
+}
+.tabela{
+    background-color: #0066ff82;
+    border-radius: 7px;
+    width: 600px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+#titul{
+    font-size: 25px;
+}
+
+/*estilização botão*/
+.estBotao {
+    font-family:"calibri", "arial";
+    font-size: 16px;
+    color: #242424;
+    line-height: 1.2;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: #33a833;
+    position: relative;
+    z-index: 1;
+  }
+/*estilização botão*/
+
+
+/*animação botão*/
+  .estBotao::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #b3ffb3;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+/*animação botão*/
+/*estilização botão limpar*/
+.estBotaoLimpar {
+    font-family:"calibri", "arial";
+    font-size: 16px;
+    color: #242424;
+    line-height: 1.2;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: #f55858;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .estBotaoLimpar::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #ffb3b3;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  
+  
+  /*animação botão*/
+  .estBotao:hover:before {
+      opacity: 0;
+    }
+  /*animação botão*/
+  
+  
+  
+  /*animação escrita botão*/
+    .estBotao:hover {
+      color: #fff;
+    }
+  /*animação escrita botão*/
+  
+  
+  
+  
+  /*botao limpar*/
+  .estBotaoLimpar:hover:before {
+    opacity: 0;
+  }
+  
+  
+  .estBotaoLimpar:hover {
+    color: #fff;
+  }
+
+  #botao{
+      margin-left: 38%;
+      margin-top: 1%;
+  }
+
+  #divProduto0.informacoes{
+    width: 100%;
+  }
+  
+  #fieldProduto{
+    margin-left: 250px; 
+    width: 70%;
+  }
+  select{
+    color: grey;
+    background:#0066ff2f;
+    border-radius: 5px;
+    border: none;
+    height: 22px;
+  }
+#pesquisaIcone{
+  height:  7.5%;
+  width:  7.5%;
+}
+#xupirs{
+  padding-left: 15px;
+  padding-right: 15px;
+}

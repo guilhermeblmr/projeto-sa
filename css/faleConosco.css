@@ -1,0 +1,262 @@
+* {
+	margin: 0px; 
+	padding: 0px;
+  font-family: "calibri", "arial"; 
+}
+
+
+
+
+/*caixa do input*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+/*caixa do input*/
+
+
+
+/*cor placeholder*/
+input::-webkit-input-placeholder { color: rgb(209, 209, 209);}
+input:-moz-placeholder { color: rgb(209, 209, 209);}
+input::-moz-placeholder { color: rgb(209, 209, 209);}
+input:-ms-input-placeholder { color: rgb(209, 209, 209);}
+/*cor placeholder*/
+
+
+/*estilização 'esqueci a senha'*/
+.recSenha {
+    font-family: "calibri", "arial";
+    font-size: 13px;
+    color: #e5e5e5;
+    line-height: 1.5;
+  }
+/*estilização 'esqueci a senha'*/
+  
+
+
+#assuntos{
+  color: #333333;
+}
+#assunto{
+  border: none;
+}
+#mensagem{
+  color: #fff;
+}  
+
+
+/*posição do bloco*/ 
+  .bloco,.blocoFale {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;  
+  }
+/*posição do bloco*/  
+
+
+
+/*cor fundo do texto*/
+  .fundoBloc {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px 55px;
+    background: #0066ff;
+  }
+/*cor fundo do texto*/
+  
+
+
+/*estilização titulo login*/
+  .tituloLogin {
+    font-family: "calibri", "arial";
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+  }
+/*estilização titulo login*/
+  
+
+
+/*estilização caixa input*/
+  .caixaInput {
+    font-family: "calibri", "arial";
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+  
+    
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px 0 38px;
+}
+/*estilização caixa input*/
+
+
+
+
+/*ajuste da area de digitação input*/
+.input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+/*ajuste da area de digitação input*/
+
+
+
+/*posição botão*/
+.botao {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+/*posição botão*/
+
+
+/*estilização botão*/
+  .estBotao {
+    font-family:"calibri", "arial";
+    font-size: 16px;
+    color: #242424;
+    line-height: 1.2;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: #33a833;
+    position: relative;
+    z-index: 1;
+  }
+/*estilização botão*/
+
+
+/*animação botão*/
+  .estBotao::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #b3ffb3;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+/*animação botão*/
+
+
+
+/*estilização botão limpar*/
+.estBotaoLimpar {
+  font-family:"calibri", "arial";
+  font-size: 16px;
+  color: #242424;
+  line-height: 1.2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: #f55858;
+  position: relative;
+  z-index: 1;
+}
+
+.estBotaoLimpar::before{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #ffb3b3;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+
+
+/*animação botão*/
+.estBotao:hover:before {
+    opacity: 0;
+  }
+/*animação botão*/
+
+
+
+/*animação escrita botão*/
+  .estBotao:hover {
+    color: #fff;
+  }
+/*animação escrita botão*/
+
+
+
+
+/*botao limpar*/
+.estBotaoLimpar:hover:before {
+  opacity: 0;
+}
+
+
+.estBotaoLimpar:hover {
+  color: #fff;
+}
+
+

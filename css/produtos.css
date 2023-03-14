@@ -1,0 +1,47 @@
+
+#conteudoPrincipal{
+    margin-top: 30px;
+    margin-left: 10%;
+    
+
+}
+
+.produtos{
+    float:left;
+    margin-right:15px;
+    
+}
+.fotoProduto{
+    width:250px;
+    height: 300px;
+    border: none;
+    
+}
+.boneco{
+    color: #0066ff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.preco{
+    font-size: 18px; 
+    color: 	#df0000;
+}
+
+#iconeCarrinhoProduto{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+#botaoCompra{
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+#iconeSeta{
+
+    width: 50px;
+    height: 50px;
+    
+}

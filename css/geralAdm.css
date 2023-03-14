@@ -1,0 +1,109 @@
+*{
+    margin: 0; 
+    padding: 0;
+    font-family:"calibri", "arial";
+  }
+  nav{
+    width:100%;
+    font-family:"calibri", "arial"; 
+    font-size: 30px;
+    background-color:#0066ff;
+    height: 50px;
+  }
+  #menu{
+    list-style:none;
+    float:left;
+    }
+  
+  .opcoesGerais{
+      position:relative;
+      float:left;
+      border-right:1px solid white;   
+    }
+  
+  
+  .opcoesGerais a{
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block; 
+    color: white;
+  }
+  .opcoesGerais a:hover{
+    background-color: #438efd;
+  }
+  
+  .submenu{  
+    position:absolute;
+    background-color:#fff;
+    display:none;
+    
+    }
+  #letraMenuMenor{
+    color: black;
+  }
+  .opcoesGerais:hover .submenu{
+      display:block;
+   
+    }
+  
+  .opcoesSubmenu{
+      border:1px solid #c0c0c0;
+      list-style: none;
+      padding-left:0px;
+      width:150px;
+      }
+  #sair{
+    float:right;
+  }
+  
+  #textoLogoff{
+    text-decoration: none;
+    color: white;
+    font-size:14px;
+    font-weight: bold;
+    float: right;
+  }
+  
+  #iconeLogoff{
+    width: 30px;
+    height:30px;  
+    margin-right: 30px;
+    float:right;
+  }
+  
+  #conteudoPrincipal{
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "calibri", "arial";
+  }
+  #voltar{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left: 42%; 
+  }
+  #botaoPesquisaBemManeiro{
+    height: 25px;
+    width: 25px;
+  }
+  #tabelaConsulta{
+    margin-left: 40%;
+  }
+  #fundoAdm{
+    background-image: url("../img/ftFundoadm.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #fundoCliente{
+    background-image: url("../img/ftFundoLiente.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #chiek{ 
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+  }

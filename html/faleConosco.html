@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP STORE - Fale Conosco</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/faleConosco.css">
+    <script src="../js/faleConosco.js"></script>
+    <link rel="icon" type="img/png" href="../img/businessman.png">
+
+</head>
+<body>
+<!-- Cabeçalho (logo e título)-->    
+<header id="cabecalho">
+    <a href="#">
+         <img src="../img/logo.png" alt="Logotipo da Loja"
+         id="logotipo">
+     </a> 
+     <h1 id="tituloPrincipal">POP STORE</h1>
+      
+     <div id="icones">
+     <a alt="Icone de login"><a href="../php/login.php" id="textoLogin"><img src="../img/iconeLogin.png" id="iconeLogin"></a>
+
+     <a alt="Icone de carrinho"><a href="#" id="textoCarrinho"><img src="../img/iconeCarrinho.png" id="iconeCarrinho"></a>
+     </div>
+     <form action="#" method="GET">
+     <div id="busca">
+     <button type="" class="botoes">
+         <img id="iconePesquisa" src="../img/iconePesquisa.png" alt="botão de busca">
+     </button>
+     <input type="text" name="pesquisa" id="pesquisa" >
+     </div>
+     </form>
+ </header>
+<!-- Menu-->  
+    <nav id="menu">
+        <a href="../index.html"><div class="opcaoMenu">Página Inicial</div></a>
+        <a href="produtos.html"><div class="opcaoMenu">Produtos</div></a>
+        <a href="#"><div class="opcaoMenu">Fale conosco</div></a>
+    </nav>
+<!-- Conteúdo principal--> 
+    
+<div class="limiter">
+		<div class="blocoFale" >
+			<div class="fundoBloc">
+				<form action="#" method="POST">
+
+					<span class="tituloLogin">
+						Fale Conosco
+					</span>
+
+                    <div class="iconeInput">
+                            <!--<label for="nome" class="labelsForm">Nome completo</label><br>-->
+                    <input type="text" name="nome" id="nome" class="caixaInput" placeholder="Nome Completo">
+                    
+
+					<!--<div class="iconeInput" data-validate = "Nome de usuario">-->
+
+					<!--<input class="caixaInput" type="text" name="username" placeholder="Nome de usuario">-->
+						<!--<span class="input" data-placeholder="&#xf207;"></span>-->
+					</div>
+
+
+                    <div class="iconeInput">
+                            <!--      <label class="labelsForm" for="email">E-mail</label><br>--> 
+                                    <input type="text" name="email" id="email" placeholder="E-mail" class="caixaInput">
+                    </div>
+
+                    <div class="iconeInput">
+                            <select id="assunto" class="caixaInput" onchange="verificaAssunto(this.value)">
+                                <option id="assuntos" value="0">Assunto</option>
+                                <option id="assuntos" value="1">Dúvida</option> 
+                                <option id="assuntos" value="2">Elogio</option>
+                                <option id="assuntos" value="3">Reclamação</option>
+                                <option id="assuntos" value="4">Sobre meu pedido</option>
+                            </select>
+                        </div>
+
+
+                        
+
+                    <div class="iconeInput" id="divNrPedido">
+                    <!-- <label for="nrPedido" class="iconeInput">Número do pedido</label>-->
+                            <input type="number" name="nrPedido" id="nrPedido" class="caixaInput" placeholder="Numero do pedido">
+                    </div>
+
+                    <div class="iconeInput">
+                        <label for="mensagem" class="caixaInput">Mensagem</label>
+                        <textarea id="mensagem" class="caixaInput" ></textarea>
+                    </div>
+
+                    <div class="botao">
+                            <button type="reset" class="estBotaoLimpar" >Limpar
+                               <!-- <img src="../img/button_limpar.png" alt="Botão limpar">-->
+                            </button>
+                    
+                            <button type="submit" class="estBotao"
+                            onclick="return validaFormulario()" >Enviar
+                                   <!-- <img src="../img/button_enviar.png" alt="Botão enviar">-->
+                            </button>
+                        </div>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

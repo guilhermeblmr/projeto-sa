@@ -1,0 +1,94 @@
+*{
+    margin:0;
+}
+body,html{
+   
+    font-family: "calibri", "arial";
+    
+}
+#cabecalho{
+    height: 150px;
+    background-color: #0066ff;
+    margin-bottom: 20px;
+}
+.sem{
+    color: black;
+}
+#logotipo{
+    width: 200px;
+    height: 135px;
+    float:left;
+}
+#tituloPrincipal{
+    font-size: 60px;
+    color: white;
+    float: left;
+    margin-top: 35px;
+}
+
+#pesquisa{
+    font-size: 25px;
+    float: right;
+    margin-right:50px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+.botoes{
+    background-color: transparent;
+    border: 0px;
+}
+
+
+#textoLogin{
+    text-decoration: none;
+    color: white;
+    font-size:14px;
+    font-weight: bold;
+    float: right;
+}
+
+#iconeLogin, #iconeCarrinho, #iconePesquisa{
+    width: 40px;
+    height:40px;  
+    margin-right: 30px;
+
+}
+#icones, #busca{
+    float: right;
+    margin-top: 40px;
+}
+#menu{
+    width:80%;
+    margin: 0 auto;
+    height:50px;
+}
+/*Formatar os links que estão dentro da DIV menu*/
+#menu a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+}
+
+.opcaoMenu{
+    width: 31.3%;
+    background-color:  #4d94ff ;
+    float: left;
+    margin: 0 1%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.opcaoMenu:hover{
+    background-color: #1a75ff;
+}
+#conteudoPrincipal{
+    min-height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+

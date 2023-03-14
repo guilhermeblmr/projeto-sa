@@ -1,0 +1,48 @@
+inicio da pagina
+<?php
+    session_start();
+    if(isset($_SESSION['idUsuario'])==true 
+    && $_SESSION['permissao']==1){
+?>
+ 
+
+fim da pagina
+ <?php
+
+    }else if(isset($_SESSION['idUsuario'])==true && 
+    $_SESSION['permissao']==2){
+       
+        header("Location: semPermissao.php");     
+
+    }else if(isset($_SESSION['idUsuario'])==false){
+        
+        header("Location: facaLogin.php"); 
+    }
+
+?>
+permissao adm
+
+
+
+
+inicio da pagina
+<?php
+session_start();
+if(isset($_SESSION['idUsuario'])==true && 
+$_SESSION['permissao']==2){
+?>
+
+
+
+
+fim da pagina
+<?php
+
+}else if(isset($_SESSION['idUsuario'])==true && 
+$_SESSION['permissao']==1){
+    header("Location: semPermissao.php");
+}else if(isset($_SESSION['idUsuario'])==false){
+    header("Location: facaLogin.php");
+}
+?>
+permissao cliente

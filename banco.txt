@@ -1,0 +1,137 @@
+CREATE DATABASE lojaonline DEFAULT CHARACTER SET utf8;
+
+USE `lojaonline` ;
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`usuarios` (
+  `idUsuario` INT NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(45) NOT NULL,
+  `senha` CHAR(32) NOT NULL COMMENT 'Criptografada em MD5',
+  `permissao` INT(1) NOT NULL COMMENT '1- Administrador / 2- Cliente',
+  PRIMARY KEY (`idUsuario`))
+ENGINE = InnoDB;
+
+
+
+USE `lojaonline` ;
+INSERT INTO `usuarios` (`idUsuario`, `permissao`, `login`, `senha`) VALUES (NULL, '1', 'adm', '827ccb0eea8a706c4c34a16891f84e7b');
+
+
+USE `lojaonline` ;
+INSERT INTO `usuarios` (`idUsuario`, `permissao`, `login`, `senha`) VALUES (NULL, '2', 'joana', '827ccb0eea8a706c4c34a16891f84e7b');
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`clientes` (
+  `idCliente` INT NOT NULL AUTO_INCREMENT,
+  `cpf` BIGINT(11) NOT NULL,
+  `nome` VARCHAR(45) NOT NULL,
+  `sobrenome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `endereco` VARCHAR(60) NOT NULL,
+  `telefone` VARCHAR(45) NOT NULL,
+  `usuarios_idUsuario` INT NOT NULL,
+  PRIMARY KEY (`idCliente`),
+  INDEX `fk_clientes_usuarios_idx` (`usuarios_idUsuario` ASC),
+  CONSTRAINT `fk_clientes_usuarios`
+    FOREIGN KEY (`usuarios_idUsuario`)
+    REFERENCES `lojaonline`.`usuarios` (`idUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+USE `lojaonline` ;
+
+INSERT INTO `clientes` (`idCliente`, `cpf`, `nome`, `sobrenome`, `email`, `endereco`, `telefone`, `usuarios_idUsuario`) VALUES (NULL, '12345678910 ', 'Joana', 'Silva', 'joanasilva@gmail.com', 'rua das cegonhas joinville 189', '47 996188256', '2');
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`categorias` (
+  `idCategoria` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idCategoria`))
+ENGINE = InnoDB;
+
+
+
+USE `lojaonline` ;
+
+INSERT INTO `categorias` (`idCategoria`, `nome`) VALUES (NULL, 'Filme');
+INSERT INTO `categorias` (`idCategoria`, `nome`) VALUES (NULL, 'Serie');
+INSERT INTO `categorias` (`idCategoria`, `nome`) VALUES (NULL, 'Desenhos Animados');
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`produtos` (
+  `idProduto` INT NOT NULL AUTO_INCREMENT,
+  `produtoNome` VARCHAR(45) NOT NULL,
+  `preco` DECIMAL(6,2) NOT NULL,
+  `categorias_idCategoria` INT NOT NULL,
+  PRIMARY KEY (`idProduto`),
+  INDEX `fk_produtos_categorias1_idx` (`categorias_idCategoria` ASC),
+  CONSTRAINT `fk_produtos_categorias1`
+    FOREIGN KEY (`categorias_idCategoria`)
+    REFERENCES `lojaonline`.`categorias` (`idCategoria`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+USE `lojaonline` ;
+
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'Avengers - Thanos', '149.99', '1');
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'WandaVision - Scarlet Witch', '130.80', '1');
+
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'Friends - Chandler Bing', '153.99', '2');
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'Cobra Kai - Daniel Larusso', '122.00', '2');
+
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'Garfield', '100.00', '3');
+INSERT INTO `produtos` (`idProduto`, `produtoNome`, `preco`, `categorias_idCategoria`) VALUES (NULL, 'Tartarugas Ninja - Michelangelo', '130.90', '3');
+
+
+
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`pedidos` (
+  `idPedido` INT NOT NULL AUTO_INCREMENT,
+  `data` DATE NOT NULL,
+  `usuarios_idUsuario` INT NOT NULL,
+  `status` int not null,
+  PRIMARY KEY (`idPedido`),
+  INDEX `fk_pedidos_usuarios1_idx` (`usuarios_idUsuario` ASC),
+  CONSTRAINT `fk_pedidos_usuarios1`
+    FOREIGN KEY (`usuarios_idUsuario`)
+    REFERENCES `lojaonline`.`usuarios` (`idUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `lojaonline`.`pedidos_has_produtos` (
+  `pedidos_idPedido` INT NOT NULL,
+  `produtos_idProduto` INT NOT NULL,
+  `quantidade` INT NOT NULL,
+  PRIMARY KEY (`pedidos_idPedido`, `produtos_idProduto`),
+  INDEX `fk_pedidos_has_produtos_produtos1_idx` (`produtos_idProduto` ASC),
+  INDEX `fk_pedidos_has_produtos_pedidos1_idx` (`pedidos_idPedido` ASC),
+  CONSTRAINT `fk_pedidos_has_produtos_pedidos1`
+    FOREIGN KEY (`pedidos_idPedido`)
+    REFERENCES `lojaonline`.`pedidos` (`idPedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pedidos_has_produtos_produtos1`
+    FOREIGN KEY (`produtos_idProduto`)
+    REFERENCES `lojaonline`.`produtos` (`idProduto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
